@@ -15,10 +15,10 @@ var port = process.env.PORT || 5000;
 const container = require('./container');
 
 
-container.resolve(function(users, _){
+container.resolve(function(users, _, admin){
 
     mongoose.Promise = global.Promise;
-    mongoose.connect('mongodb://localhost/Chat_App');
+    mongoose.connect('mongodb://mittalprince:prince25@ds255319.mlab.com:55319/chatapp1');
 
     const app = SetupExpress();
 
@@ -32,6 +32,7 @@ container.resolve(function(users, _){
 
         const router = require('express-promise-router')();
         users.SetRouting(router);
+        admin.SetRouting(router);
 
         app.use(router);
 
@@ -42,6 +43,7 @@ container.resolve(function(users, _){
 
         require('./passport/passport-local');
         require('./passport/passport-facebook');
+        require('./passport/passport-google');
 
         app.use(express.static('public'));
         app.use(cookieParser());
