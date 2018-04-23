@@ -19,7 +19,7 @@ passport.use(new GoogleStrategy({
     clientID: secret.google.clientID,
     clientSecret: secret.google.clientSecret,
     profileFields: ['email', 'displayName', 'photos'],
-    callbackURL: 'http://localhost:5000/auth/google/callback',
+    callbackURL: 'https://intense-harbor-56610.herokuapp.com/auth/google/callback',
     passReqToCallback: true
 
 }, (req, accessToken, refreshToken, profile, done) => {

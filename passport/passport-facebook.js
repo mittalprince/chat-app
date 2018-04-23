@@ -19,7 +19,7 @@ passport.use(new FacebookStrategy({
     clientID: secret.facebook.clientID,
     clientSecret: secret.facebook.clientSecret,
     profileFields: ['email', 'displayName', 'photos'],
-    callbackURL: 'https://localhost:5000/auth/facebook/callback',
+    callbackURL: 'https://intense-harbor-56610.herokuapp.com/auth/facebook/callback',
     passReqToCallback: true
 
 }, (req, token, refreshToken, profile, done) => {
