@@ -30,7 +30,7 @@ passport.use(new FacebookStrategy({
         }
 
         if(user){
-            console.log("user exist",user);
+            //console.log("user exist",user);
             return done(null, user);
         }else{
             const newUser = new User();
@@ -42,8 +42,13 @@ passport.use(new FacebookStrategy({
             newUser.fbTokens.push({token:token});
 
             newUser.save((err) => {
-                console.log(newUser);
+                if(err){
+                    return done(err)
+                }
+                //console.log(newUser);
+                else{
                 return done(null, newUser);
+                }
             })
         }
     })
