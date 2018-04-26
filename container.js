@@ -6,7 +6,9 @@ const container = dependable.container();
 const simpleDependecies = [
     ['_', 'lodash'],
     ['passport','passport'],
-    ['formidable','formidable']
+    ['formidable','formidable'],
+    ['Club','./models/clubs'],
+    ['aws','./helpers/AWSUpload']
 
 ];
 
