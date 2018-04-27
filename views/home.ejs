@@ -72,9 +72,9 @@
                                         <hr/>
                                         <select class="form-control " name="country" id="country" >
                                             <option value="">Filter By Country</option>
-                                            <option>England</option>
-                                            <option>Germany</option>
-                                            <option>France</option>
+                                            <% _.forEach(country, function(value2){  %>
+                                                <option value="<%= value2._id %>"><%= value2._id %></option>
+                                            <% })%>
                                         </select>
                                         <div class="clearfix"></div>
                                         <button class="btn add-apply">Apply</button>
@@ -94,26 +94,28 @@
                             <%  _.forEach(val, function(val2){ %>
                             <form action="#" method="post" id="add-fav">
                                 <div class="item col-md-4">
-                                    <div class="thumbnail">
-                                        <img src="https://uploadgroupimages.s3.amazonaws.com/<%= val2.image %>" alt="">
-                                        <div class="caption">
-                                            <h4><%= val2.name %></h4>
+                                    <a style="text-decoration: none" href="/group/<%= val2.name %>">
+                                        <div class="thumbnail">
+                                            <img src="https://uploadgroupimages.s3.amazonaws.com/<%= val2.image %>" alt="">
+                                            <div class="caption">
+                                                <h4><%= val2.name %></h4>
 
-                                            <div class="row">
-                                                <div class="col-xs-12 col-md-6">
-                                                    <p>
-                                                        <%= val2.country %>
-                                                    </p>
-                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-md-6">
+                                                        <p>
+                                                            <%= val2.country %>
+                                                        </p>
+                                                    </div>
 
-                                                <div class="col-xs-12 col-md-6">
-                                                    <button class="btn add-fav">
-                                                        Add To Favorite
-                                                    </button>
+                                                    <div class="col-xs-12 col-md-6">
+                                                        <button class="btn add-fav">
+                                                            Add To Favorite
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </form>
                             <% }) %>

@@ -14,29 +14,30 @@ module.exports = function(async, Club, _){
                 },
 
                 function(callback){
-                    Club.aggregate({
+                    Club.aggregate([{
                         $group:{
-                            _id: "$country"
+                            _id:"$country"
                         }
-                    }, (err, newResults) =>{
+                    }], (err, newResults) =>{
                         callback(err, newResults);
                     });
                 }
 
             ],(err,results)=>{
                 const res1 = results[0];
-                console.log(res1);
-                const res2 = results[0];
-                console.log(res2);
+                //console.log(res1);
+                const res2 = results[1];
+                //console.log(res2);
                 const dataChunk = [];
                 const chunkSize = 3;
 
-                for(let i=0 ; i < res1.length; i += chunkSize){
-                    dataChunk.push(res1.slice(i,i+chunkSize));
+                for(let i=0 ; i < results[0].length; i += chunkSize){
+                    dataChunk.push(results[0].slice(i,i+chunkSize));
                 }
-                console.log(dataChunk);
-
-                res.render('home',{title:'Footballkik - Home', data:dataChunk});
+                //console.log(dataChunk);
+                //console.log("\n ",results)
+                const countrySort = _.sortBy(res2, '_id')
+                res.render('home',{title:'Footballkik - Home', data:dataChunk, country:countrySort});
             })
 
         }
