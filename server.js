@@ -15,7 +15,7 @@ var port = process.env.PORT || 5000;
 const container = require('./container');
 
 
-container.resolve(function(users, _, admin){
+container.resolve(function(users, _, admin, home){
 
     mongoose.Promise = global.Promise;
     mongoose.connect('mongodb://mittalprince:prince25@ds255319.mlab.com:55319/chatapp1');
@@ -33,6 +33,7 @@ container.resolve(function(users, _, admin){
         const router = require('express-promise-router')();
         users.SetRouting(router);
         admin.SetRouting(router);
+        home.SetRouting(router);
 
         app.use(router);
 
