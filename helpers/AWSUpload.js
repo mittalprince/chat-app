@@ -12,7 +12,7 @@ const s0 = new AWS.S3({});
 const upload = multer({
     storage: multerS3({
         s3: s0,
-        bucket: 'footballkik',
+        bucket: 'uploadgroupimages',
         acl: 'public-read',
         metadata: function(req, file, cb){
             cb(null, {fieldName: file.fieldname});
