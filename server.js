@@ -9,6 +9,7 @@ const MongoStore = require('connect-mongo')(session);
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const passport = require('passport');
+const socketIO = require('socket.io');
 
 var port = process.env.PORT || 5000;
 
@@ -25,10 +26,13 @@ container.resolve(function(users, _, admin, home, group){
     function SetupExpress(){
         const app =express();
         const server = http.createServer(app);
+        const io = socketIO(server);
         server.listen(port,function(){
             console.log('Listening on port 5000');
         });
         ConfigureExpress(app);
+
+        require('./socket/groupchat')(io);
 
         const router = require('express-promise-router')();
         users.SetRouting(router);
