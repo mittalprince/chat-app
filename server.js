@@ -11,7 +11,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const socketIO = require('socket.io');
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 6060;
 
 const container = require('./container');
 
@@ -28,7 +28,7 @@ container.resolve(function(users, _, admin, home, group){
         const server = http.createServer(app);
         const io = socketIO(server);
         server.listen(port,function(){
-            console.log('Listening on port 5000');
+            console.log('Listening on port 6060');
         });
         ConfigureExpress(app);
 
