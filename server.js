@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const passport = require('passport');
 const socketIO = require('socket.io');
+const {Users} = require('./helpers/UserClass')
 
 var port = process.env.PORT || 6060;
 
@@ -32,7 +33,7 @@ container.resolve(function(users, _, admin, home, group){
         });
         ConfigureExpress(app);
 
-        require('./socket/groupchat')(io);
+        require('./socket/groupchat')(io, Users);
 
         const router = require('express-promise-router')();
         users.SetRouting(router);
