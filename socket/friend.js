@@ -5,6 +5,14 @@ module.exports = function(io){
 
             callback()
         });
+
+        socket.on('friendRequest',(friend,callback)=>{
+            io.to(friend.receiver).emit('newFriendRequest',{
+                from:friend.sender,
+                to:friend.receiver
+            });
+            callback();
+        })
     });
 
 }

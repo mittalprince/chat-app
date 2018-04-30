@@ -13,16 +13,25 @@ $(document).ready(function(){
 
         });
     });
+    socket.on('newFriendRequest',function(friend){
+
+    })
     $('#add_friend').on('submit',function(e){
         e.preventDefault();
 
-        var receuverName = $('#receiverName').val()
+        var receiverName = $('#receiverName').val()
 
         $.ajax({
             url:`/group/${room}`,
             type:'POST',
             data:{
-
+                receiverName:receiverName
+            },
+            success: function(){
+                socket.emit('friendRequest',{
+                    receiver: receiverName,
+                    sender:sender
+                },)
             }
         })
     })
