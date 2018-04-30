@@ -11,6 +11,21 @@ $(document).ready(function(){
 
         socket.emit('joinRequest',params, function(){
 
+        });
+    });
+    $('#add_friend').on('submit',function(e){
+        e.preventDefault();
+
+        var receuverName = $('#receiverName').val()
+
+        $.ajax({
+            url:`/group/${room}`,
+            type:'POST',
+            data:{
+
+            }
         })
     })
+
+
 })

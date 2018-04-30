@@ -4,8 +4,7 @@ module.exports = function(io){
             socket.join(myRequest.sender);
 
             callback()
-        })
-
-    })
+        });
+    });
 
 }
