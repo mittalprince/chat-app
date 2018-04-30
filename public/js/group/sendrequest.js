@@ -10,19 +10,19 @@ $(document).ready(function(){
         }
 
         socket.emit('joinRequest',params, function(){
-
+            console.log("Joined")
         });
     });
     socket.on('newFriendRequest',function(friend){
-
+            console.log(friend)
     })
     $('#add_friend').on('submit',function(e){
         e.preventDefault();
 
-        var receiverName = $('#receiverName').val()
+        var receiverName = $('#receiverName').val();
 
         $.ajax({
-            url:`/group/${room}`,
+            url:'/group/'+room,
             type:'POST',
             data:{
                 receiverName:receiverName
@@ -31,10 +31,13 @@ $(document).ready(function(){
                 socket.emit('friendRequest',{
                     receiver: receiverName,
                     sender:sender
-                },)
+                },function(){
+                    console.log("request sent")
+                })
+
             }
         })
-    })
+    });
 
 
 })
