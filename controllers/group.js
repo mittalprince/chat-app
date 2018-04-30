@@ -7,7 +7,19 @@ module.exports = function(Users,async){
 
         groupPage: function(req,res){
             const name = req.params.name;
-            res.render('groupchat/group',{title:'Footballkik - Group',user:req.user ,groupName: name});
+            async.parallel([
+                function(callback){
+                    Users.findOne({'username':req.user.username})
+                        .populate('request.userId')
+                        .exec((err,result)=>{
+                            callback(err,result)
+                        })
+                }
+            ],(err,results)=>{
+                const result1= results[0];
+                res.render('groupchat/group',{title:'Footballkik - Group',user:req.user ,
+                    groupName: name, data:result1});
+            })
         },
         groupPostPage: function(req,res){
             async.parallel([

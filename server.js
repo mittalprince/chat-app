@@ -12,7 +12,7 @@ const passport = require('passport');
 const socketIO = require('socket.io');
 const {Users} = require('./helpers/UserClass')
 
-var port = process.env.PORT || 3434;
+var port = process.env.PORT || 3435;
 
 const container = require('./container');
 
