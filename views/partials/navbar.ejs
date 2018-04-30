@@ -19,7 +19,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="glyphicon fa fa-bell nav-glyphicon"></span><b class="caret"></b>
                             <% if(data.totalRequest > 0) {%>
-                                <span class="label label-primary nav-label-icon"><%= data.request.length %></span>
+                                <span class="label label-primary nav-label-icon"><%= data.totalRequest %></span>
                              <% } else { %>
                                 <span class="label label-primary nav-label-icon" style="display: none"></span>
                             <% } %>
@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="col-md-12">
-                                    <% if(data.request.length > 0) {%>
+                                    <% if(data.totalRequest > 0) {%>
                                     <% _.forEach(data.request, function(val){ %>
                                         <div class="row">
                                             <div class="col-md-3">
