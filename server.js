@@ -12,7 +12,7 @@ const passport = require('passport');
 const socketIO = require('socket.io');
 const {Users} = require('./helpers/UserClass')
 
-var port = process.env.PORT || 6060;
+var port = process.env.PORT || 3333;
 
 const container = require('./container');
 
@@ -29,7 +29,7 @@ container.resolve(function(users, _, admin, home, group){
         const server = http.createServer(app);
         const io = socketIO(server);
         server.listen(port,function(){
-            console.log('Listening on port 6060');
+            console.log('Listening on port 3333');
         });
         ConfigureExpress(app);
 
