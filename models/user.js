@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
         userId:{type:mongoose.Schema.Types.ObjectId, ref:'User'},
         username:{type:String, default:''}
     }],
-    freindList:[{
+    freindsList:[{
        friendId:{type:mongoose.Schema.Types.ObjectId, ref:'User'},
         friendName:{type:String, default:''}
     }],
