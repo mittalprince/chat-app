@@ -32,10 +32,10 @@ module.exports = function(Users,async){
                                 'request.userId':{$ne:req.user._id},
                                 'freindsList.friendId':{$ne:req.user._id}
                             },
-                            {   "request":{
-                                "userId":req.user._id,
-                                "username":req.user.username
-                            },
+                            {   $push:{request:{
+                                userId:req.user._id,
+                                username:req.user.username
+                            }},
                                 $inc:{"totalRequest":1}
                                 // "totalRequest":{
                                 // $inc: 1
@@ -52,9 +52,9 @@ module.exports = function(Users,async){
                             'username':req.user.username,
                             'sentRequest.username':{$ne:req.body.receiverName}
                             },
-                            {   "sentRequest": {
-                                "username":req.body.receiverName
-                            }
+                            {  $push:{sentRequest: {
+                                username:req.body.receiverName
+                            }}
                         },(err,count)=>{
                             callback(err,count);
                             console.log('3 ',count)
