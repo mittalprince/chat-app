@@ -30,7 +30,7 @@ module.exports = function(Users,async){
                         Users.update({
                                 'username':req.body.receiverName,
                                 'request.userId':{$ne:req.user._id},
-                                'freindsList.friendId':{$ne:req.user._id}
+                                'friendsList.friendId':{$ne:req.user._id}
                             },
                             {   $push:{request:{
                                 userId:req.user._id,
@@ -42,7 +42,7 @@ module.exports = function(Users,async){
                                 // }
                         },(err,count)=>{
                             callback(err,count);
-                            console.log('2 ',count)
+                           //  console.log('2 ',count)
                         })
                     }
                 },
@@ -57,13 +57,13 @@ module.exports = function(Users,async){
                             }}
                         },(err,count)=>{
                             callback(err,count);
-                            console.log('3 ',count)
+                            //console.log('3 ',count)
                         })
                     }
                 }
             ],(err, results)=>{
                 res.redirect('/group/'+req.params.name)
-                console.log('4 ',results)
+                //console.log('4 ',results)
             });
         }
     }
