@@ -149,7 +149,7 @@
                             Message.update({
                                     '_id': req.body.chatId
                                 },
-                                {
+                               {
                                     "isRead": true
                                 }, (err, done) => {
                                     callback(err, done);
