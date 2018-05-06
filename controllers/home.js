@@ -29,7 +29,7 @@ module.exports = function(async, Club, _, Users){
                         .exec((err,result)=>{
                             callback(err,result)
                         })
-                }
+                },
 
             ],(err,results)=>{
                 const res1 = results[0];

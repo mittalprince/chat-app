@@ -48,7 +48,7 @@ $(document).ready(function(){
                     $(this).parent().eq(1).remove();
                 }
             });
-            $('#reload').load(location.href + ' #reload');
+            $('#reload').load(location.href + " #reload");
         });
     });
 
