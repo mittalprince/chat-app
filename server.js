@@ -11,13 +11,14 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const socketIO = require('socket.io');
 const {Users} = require('./helpers/UserClass')
+const {Global} = require('./helpers/Global')
 
-var port = process.env.PORT || 9111;
+var port = process.env.PORT || 8111;
 
 const container = require('./container');
 
 
-container.resolve(function(users, _, admin, home, group){
+container.resolve(function(users, _, admin, home, group, results){
 
     mongoose.Promise = global.Promise;
     mongoose.connect('mongodb://mittalprince:prince25@ds255319.mlab.com:55319/chatapp1');
@@ -35,13 +36,14 @@ container.resolve(function(users, _, admin, home, group){
 
         require('./socket/groupchat')(io, Users);
         require('./socket/friend')(io, Users);
+        require('./socket/globalroom')(io, Global,_);
 
         const router = require('express-promise-router')();
         users.SetRouting(router);
         admin.SetRouting(router);
         home.SetRouting(router);
         group.SetRouting(router);
-
+        results.SetRouting(router);
         app.use(router);
 
     }

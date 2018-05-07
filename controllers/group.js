@@ -2,7 +2,8 @@
         return {
             SetRouting: function(router) {
                 router.get('/group/:name', this.groupPage);
-                router.post('/group/:name',this.groupPostPage)
+                router.post('/group/:name',this.groupPostPage);
+                router.get('/logout',this.logout);
             },
 
             groupPage: function(req,res){
@@ -159,6 +160,13 @@
                 ],(err,results)=>{
                     //console.log('6 ',results);
                     res.redirect('/group/'+req.params.name)
+                });
+            },
+
+            logout: function(req,res){
+                req.logout();
+                req.session.destroy((err)=>{
+                    res.redirect('/');
                 });
             }
         }

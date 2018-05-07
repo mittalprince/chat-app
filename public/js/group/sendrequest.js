@@ -32,7 +32,7 @@ $(document).ready(function(){
                     $(this).parent().eq(1).remove();
                 }
             });
-            $('#reload').load(location.href + " #reload");
+            $('#reload').load(location.href + ' #reload');
         });
 
         $(document).on('click', '#cancel_friend', function(){
@@ -48,7 +48,7 @@ $(document).ready(function(){
                     $(this).parent().eq(1).remove();
                 }
             });
-            $('#reload').load(location.href + " #reload");
+            $('#reload').load(location.href + ' #reload');
         });
     });
 
