@@ -77,21 +77,22 @@
       <file leaf-file-name="group.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/group.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1008">
+            <state relative-caret-position="-2591">
               <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="global.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+            <state relative-caret-position="200">
+              <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
               <folding>
-                <marker date="1525796863106" expanded="true" signature="866:897" ph="..." />
-                <marker date="1525796863106" expanded="true" signature="986:1032" ph="..." />
+                <marker date="1525797725251" expanded="true" signature="841:884" ph="..." />
+                <marker date="1525797725251" expanded="true" signature="1012:1056" ph="..." />
+                <marker date="1525797725251" expanded="true" signature="1204:1243" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,14 +121,14 @@
       <file leaf-file-name="privatechat.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/privatechat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="-108">
               <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="group.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="group.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/groupchat/group.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-409">
@@ -198,8 +199,8 @@
         <option value="$PROJECT_DIR$/views/private/privatechat.html" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/views/private/privatechat.ejs" />
-        <option value="$PROJECT_DIR$/public/js/global.js" />
         <option value="$PROJECT_DIR$/controllers/privatechat.js" />
+        <option value="$PROJECT_DIR$/public/js/global.js" />
       </list>
     </option>
   </component>
@@ -395,12 +396,12 @@
       <workItem from="1524793717865" duration="29070000" />
       <workItem from="1524939487401" duration="9658000" />
       <workItem from="1525090042892" duration="102230000" />
-      <workItem from="1525782150479" duration="3512000" />
+      <workItem from="1525782150479" duration="4013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239411000" />
+    <option name="totallyTimeSpent" value="239912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -807,38 +808,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/global.js">
+    <entry file="file://$PROJECT_DIR$/views/groupchat/group.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-          <folding>
-            <marker date="1525796863106" expanded="true" signature="866:897" ph="..." />
-            <marker date="1525796863106" expanded="true" signature="986:1032" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/privatechat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        <state relative-caret-position="-409">
+          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/group.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1008">
+        <state relative-caret-position="-2591">
           <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/groupchat/group.ejs">
+    <entry file="file://$PROJECT_DIR$/controllers/privatechat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        <state relative-caret-position="-108">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+          <folding>
+            <marker date="1525797725251" expanded="true" signature="841:884" ph="..." />
+            <marker date="1525797725251" expanded="true" signature="1012:1056" ph="..." />
+            <marker date="1525797725251" expanded="true" signature="1204:1243" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
