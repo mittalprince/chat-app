@@ -1,7 +1,7 @@
 module.exports = function(async,Users){
     return {
         SetRouting: function(router){
-            router.get('/chat',this.getchatPage)
+            router.get('/chat/:name',this.getchatPage)
         },
 
         getchatPage: function(req,res){
