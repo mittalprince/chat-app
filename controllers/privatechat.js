@@ -15,10 +15,10 @@ module.exports = function(async,Users,Message){
                         })
                 },
                 function(callback){
-                    Message.aggregate(
-                        {$match:{$or:[{'senderName':req.user.username},
-                        {'receiverName':req.user.username}]}},
-                        {$sort:{'createdAt':-1}},
+                    const nameRegex = new RegExp("^"+req.user.username.toLowerCase(), "i");
+                    Message.aggregate([
+                        {$match:{$or:[{"senderName":nameRegex}, {"receiverName":nameRegex}]}},
+                        {$sort:{"createdAt":-1}},
                         {
                             $group:{"_id":{
                                 "last_message_between":{
@@ -30,24 +30,41 @@ module.exports = function(async,Users,Message){
                                         },
                                         {$concat:["$senderName"," and ","$receiverName"]},
                                         {$concat:["$receiverName"," and ","$senderName"]}
-
                                     ]
                                 }
-                            }, "body":{$first:"$$ROOT"}
+                            }, "body": {$first:"$$ROOT"}
                             }
-                        }, function (err,newResult) {
-                            callback(err,newResult);
                         }
-                    )
+                    ],function(err, newResult){
+                        console.log(newResult);
+                        callback(err,newResult)
+                    })
+                },
+
+                function(callback){
+                    Message.find({'$or':[{'senderName':req.user.username},
+                        {'receiverName':req.user.username}]})
+                        .populate('sender')
+                        .populate('receiver')
+                        .exec((err,result3)=>{
+                        callback(err,result3)
+                        })
                 }
             ],(err,results)=>{
                 const result1= results[0];
+                const result2= results[1];
+                const result3 = results[2];
+                console.log(results[1]);
+
+                const params = req.params.name.split('.');
+                const nameParams = params[0];
+
                 //console.log(results)
                 // console.log('m ',result1);
                 //console.log(' yo yo ')
                 //console.log('p ',result1.request[0].userId)
                 res.render('private/privatechat',{title:'Footballkik - Private Chat',user:req.user ,
-                     data:result1});
+                     data:result1, chat:result2,chats:result3, name:nameParams});
             })
         },
 
@@ -58,7 +75,7 @@ module.exports = function(async,Users,Message){
 
             async.waterfall([
                 function(callback){
-                console.log("fuck")
+                //console.log("fuck")
                     if(req.body.message){
                         Users.findOne({'username':{$regex: nameRegex}}, (err, data) => {
                             callback(err, data);
@@ -68,7 +85,7 @@ module.exports = function(async,Users,Message){
 
                 function(data, callback){
                     if(req.body.message){
-                        console.log("prince")
+                       // console.log("prince")
                         const newMessage = new Message();
                         newMessage.sender = req.user._id;
                         newMessage.receiver = data._id;

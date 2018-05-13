@@ -109,18 +109,35 @@
 
                         <div class="chat_area">
                             <ul id="messages" class="list-unstyled">
-
-                                <!--<li class="left">-->
-                                <!--<span class="chat-img1 pull-left">-->
-                                <!--<img src="https://placehold.it/300x300" class="img-circle"-->
-                                <!--alt="">-->
-                                <!--</span>-->
-                                <!--<div class="chat-body1">-->
-                                <!--<span class="chat-name">Username</span>-->
-                                <!--<br>-->
-                                <!--Message Body-->
-                                <!--</div>-->
-                                <!--</li>-->
+                                <% if(chats.length > 0){%>
+                                <% _.forEach(chats, function(val){%>
+                                <% if(name === val.receiver.username.toLowerCase()){%>
+                                    <li class="left">
+                                    <span class="chat-img1 pull-left">
+                                    <img src="https://placehold.it/300x300" class="img-circle"
+                                    alt="">
+                                    </span>
+                                    <div class="chat-body1">
+                                    <span class="chat-name"><%= val.senderName %></span>
+                                    <br>
+                                    <%= val.message%>
+                                    </div>
+                                    </li>
+                                <% } else if(name === val.sender.username.toLowerCase()){%>
+                                    <li class="left">
+                                    <span class="chat-img1 pull-left">
+                                    <img src="https://placehold.it/300x300" class="img-circle"
+                                         alt="">
+                                    </span>
+                                        <div class="chat-body1">
+                                            <span class="chat-name"><%= val.senderName %></span>
+                                            <br>
+                                            <%= val.message%>
+                                        </div>
+                                    </li>
+                                <% }%>
+                                <% }) %>
+                                <% }%>
                             </ul>
 
                             <script id="message-template" type="text/template">

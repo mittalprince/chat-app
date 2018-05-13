@@ -17,6 +17,10 @@ $(document).ready(function(){
 
         socket.emit('join PM', params);
 
+        socket.on('message diaplay',function(){
+            $('#reload').load(location.href + ' #reload');
+        })
+
     });
 
     socket.on('new message', function(data){
