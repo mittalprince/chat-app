@@ -28,62 +28,64 @@
             </div>
             <div class="col-md-12">
                 <% if(chat.length >0) {%>
-                <% _.forEach(chat,function(val){ %>
-                    <%if(user.username !== val.body.senderName){ %>
-                    <a href="/chat/<%= _.lowerCase(val.body.senderName) %>.<%= _.lowerCase(user.username) %>">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <p class="text-center">
-                                    <img src="https://placehold.it/300x300" class="img-circle img-responsive dropdown-img" />
-                                </p>
-                            </div>
-                            <div class="col-md-9 pleft-0">
+                    <% _.forEach(chat,function(val){ %>
+                        <%if(user.username !== val.body.senderName){ %>
+                            <a data-value="<%= val.body._id %>" id="messageLink" href="/chat/<%= _.lowerCase(val.body.senderName) %>.<%= _.lowerCase(user.username) %>">
                                 <div class="row">
-                                    <div class="col-md-12 textRow">
-                                        <div class="col-md-12" id="textRow">
-                                            <p class="text-left drop-name">
-                                                <% if(user.username !== val.body.receiverName){ %>
-                                                    <strong><%= val.body.receiverName %></strong>
-                                                <% } else{%>
-                                                    <strong><%= val.body.senderName %></strong>
-                                                <% } %>
-                                            </p>
-                                            <%= val.body.message %>
+                                    <div class="col-md-3">
+                                        <p class="text-center">
+                                        <img src="https://placehold.it/300x300" class="img-circle img-responsive dropdown-img" />
+                                        </p>
+                                    </div>
+                                    <div class="col-md-9 pleft-0">
+                                        <div class="row">
+                                            <div class="col-md-12 textRow">
+                                                <div class="col-md-12" id="textRow">
+                                                    <p class="text-left drop-name">
+                                                        <% if(user.username !== val.body.receiverName){ %>
+                                                            <strong><%= val.body.receiverName %></strong>
+                                                        <% } else{%>
+                                                            <strong><%= val.body.senderName %></strong>
+                                                        <% } %>
+                                                    </p>
+                                                    <input type="hidden" name="chatId" id="chatId" value="<%= val.body._id %>">
+                                                    <%= val.body.message %>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                <% } else if(user.username === val.body.senderName){%>
-                <a href="/chat/<%= _.lowerCase(val.body.receiverName) %>.<%= _.lowerCase(user.username) %>">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p class="text-center">
-                                <img src="https://placehold.it/300x300" class="img-circle img-responsive dropdown-img" />
-                            </p>
-                        </div>
-                        <div class="col-md-9 pleft-0">
-                            <div class="row">
-                                <div class="col-md-12 textRow">
-                                    <div class="col-md-12" id="textRow">
-                                        <p class="text-left drop-name">
-                                            <% if(user.username !== val.body.receiverName){ %>
-                                            <strong><%= val.body.receiverName %></strong>
-                                            <% } else{%>
-                                            <strong><%= val.body.senderName %></strong>
-                                            <% } %>
+                            </a>
+                        <% } else if(user.username === val.body.senderName){%>
+                             <a  data-value="<%= val.body._id %>" id="messageLink" href="/chat/<%= _.lowerCase(val.body.receiverName) %>.<%= _.lowerCase(user.username) %>">
+                                 <div class="row">
+                                    <div class="col-md-3">
+                                        <p class="text-center">
+                                            <img src="https://placehold.it/300x300" class="img-circle img-responsive dropdown-img" />
                                         </p>
-                                        <%= val.body.message %>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <hr class="dropdown-divider" />
-                <% } %>
-                <% }) %>
+                                    <div class="col-md-9 pleft-0">
+                                        <div class="row">
+                                            <div class="col-md-12 textRow">
+                                                <div class="col-md-12" id="textRow">
+                                                    <p class="text-left drop-name">
+                                                        <% if(user.username !== val.body.receiverName){ %>
+                                                            <strong><%= val.body.receiverName %></strong>
+                                                            <% } else{%>
+                                                            <strong><%= val.body.senderName %></strong>
+                                                        <% } %>
+                                                    </p>
+                                                    <input type="hidden" name="chatId" id="chatId" value="<%= val.body._id %>">
+                                                    <%= val.body.message %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                             </a>
+                            <hr class="dropdown-divider" />
+                        <% } %>
+                    <% }) %>
                 <% } %>
             </div>
         </div>

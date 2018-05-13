@@ -34,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="privatechat.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="privatechat.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/private/privatechat.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="125" column="87" lean-forward="false" selection-start-line="125" selection-start-column="87" selection-end-line="125" selection-end-column="87" />
+            <state relative-caret-position="81">
+              <caret line="185" column="33" lean-forward="false" selection-start-line="185" selection-start-column="33" selection-end-line="185" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -57,8 +57,18 @@
       <file leaf-file-name="pm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/privatechat/pm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+            <state relative-caret-position="249">
+              <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messagelink.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/messagelink.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -87,8 +97,8 @@
       <file leaf-file-name="message.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/partials/message.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="58" column="104" lean-forward="false" selection-start-line="58" selection-start-column="104" selection-end-line="58" selection-end-column="104" />
+            <state relative-caret-position="198">
+              <caret line="77" column="127" lean-forward="false" selection-start-line="77" selection-start-column="127" selection-end-line="77" selection-end-column="127" />
               <folding />
             </state>
           </provider>
@@ -104,31 +114,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="privatechat.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="privatechat.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/privatechat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+            <state relative-caret-position="123">
+              <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="group.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/group.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-144">
+              <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -151,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/home.html" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/passport/passport-local.js" />
         <option value="$PROJECT_DIR$/public/css/login.css" />
@@ -197,11 +196,12 @@
         <option value="$PROJECT_DIR$/container.js" />
         <option value="$PROJECT_DIR$/views/home.ejs" />
         <option value="$PROJECT_DIR$/views/groupchat/group.ejs" />
-        <option value="$PROJECT_DIR$/views/partials/message.ejs" />
         <option value="$PROJECT_DIR$/socket/privatemessage.js" />
+        <option value="$PROJECT_DIR$/views/private/privatechat.ejs" />
+        <option value="$PROJECT_DIR$/views/partials/message.ejs" />
         <option value="$PROJECT_DIR$/public/js/privatechat/pm.js" />
         <option value="$PROJECT_DIR$/controllers/privatechat.js" />
-        <option value="$PROJECT_DIR$/views/private/privatechat.ejs" />
+        <option value="$PROJECT_DIR$/public/js/messagelink.js" />
       </list>
     </option>
   </component>
@@ -255,53 +255,6 @@
               <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
               <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="group" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="privatechat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="socket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="groupchat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chat_App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chat_App" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="private" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -369,12 +322,12 @@
       <workItem from="1525090042892" duration="102230000" />
       <workItem from="1525782150479" duration="10804000" />
       <workItem from="1525875659267" duration="12604000" />
-      <workItem from="1525970064270" duration="9592000" />
+      <workItem from="1525970064270" duration="12910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268899000" />
+    <option name="totallyTimeSpent" value="272217000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,13 +393,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/home.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/signup.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
@@ -663,13 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/group.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2591">
-          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/global.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -754,14 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/message.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="58" column="104" lean-forward="false" selection-start-line="58" selection-start-column="104" selection-end-line="58" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/home.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -786,26 +717,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/private/privatechat.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="185" column="33" lean-forward="false" selection-start-line="185" selection-start-column="33" selection-end-line="185" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/message.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="77" column="127" lean-forward="false" selection-start-line="77" selection-start-column="127" selection-end-line="77" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/privatechat/pm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        <state relative-caret-position="249">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/messagelink.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/group.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/privatechat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/private/privatechat.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="125" column="87" lean-forward="false" selection-start-line="125" selection-start-column="87" selection-end-line="125" selection-end-column="87" />
+        <state relative-caret-position="123">
+          <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
           <folding />
         </state>
       </provider>
