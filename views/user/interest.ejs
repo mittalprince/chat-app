@@ -84,69 +84,71 @@
 
                 <!--MIDDLE-->
                 <div class="col-sm-8 col-md-9 mob-50">
-                    <div>
-                        <div class="user-display">
+                    <span id="error"></span>
+                    <form method="post">
+                        <div>
+                            <div class="user-display">
 
-                            <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite Clubs</h3>
-                            <hr />
-                            <p style="margin-bottom:30px;">
-                                <span class="glyphicon glyphicon-check"></span>
-                            </p>
+                                <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite Clubs</h3>
+                                <hr />
+                                <p style="margin-bottom:30px;">
+                                    <span class="glyphicon glyphicon-check"></span>
+                                </p>
 
-                            <div class="form-group ad-30" style="margin-top:18px;">
-                                <div class="input-group">
-                                    <input id="favClub" class="form-control add-items" name="favClub" type="text" style="">
+                                <div class="form-group ad-30" style="margin-top:18px;">
+                                    <div class="input-group">
+                                        <input id="favClub" class="form-control add-items" name="favClub" type="text" style="">
 
-                                    <span class="input-group-btn">
-					                    <button class="btn btn-default add-items-btn" id="favClubBtn" style="font-weight:bold; background-color:#4aa1f3">Add Club</button>
-				                    </span>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default add-items-btn" id="favClubBtn" style="font-weight:bold; background-color:#4aa1f3">Add Club</button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div style="margin-top: 20px">
-                        <div class="user-display">
+                        <div style="margin-top: 20px">
+                            <div class="user-display">
 
-                            <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite Players</h3>
-                            <hr />
-                            <p style="margin-bottom:30px;">
-                                <span class="glyphicon glyphicon-check"></span>
-                            </p>
+                                <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite Players</h3>
+                                <hr />
+                                <p style="margin-bottom:30px;">
+                                    <span class="glyphicon glyphicon-check"></span>
+                                </p>
 
-                            <div class="form-group ad-30" style="margin-top:18px;">
-                                <div class="input-group">
-                                    <input id="favClub" class="form-control add-items" name="favClub" type="text" style="">
+                                <div class="form-group ad-30" style="margin-top:18px;">
+                                    <div class="input-group">
+                                        <input id="favClub" class="form-control add-items" name="favClub" type="text" style="">
 
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default add-items-btn" id="favClubBtn" style="font-weight:bold; background-color:#4aa1f3">Add Players</button>
-                                    </span>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default add-items-btn" id="favClubBtn" style="font-weight:bold; background-color:#4aa1f3">Add Players</button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div style="margin-top: 20px">
-                        <div class="user-display">
+                        <div style="margin-top: 20px">
+                            <div class="user-display">
 
-                            <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite National Teams</h3>
-                            <hr />
-                            <p style="margin-bottom:30px;">
-                                <span class="glyphicon glyphicon-check"></span>
-                            </p>
+                                <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite National Teams</h3>
+                                <hr />
+                                <p style="margin-bottom:30px;">
+                                    <span class="glyphicon glyphicon-check"></span>
+                                </p>
 
-                            <div class="form-group ad-30" style="margin-top:18px;">
-                                <div class="input-group">
-                                    <input id="favClub" class="form-control add-items" name="favClub" type="text" style="">
+                                <div class="form-group ad-30" style="margin-top:18px;">
+                                    <div class="input-group">
+                                        <input id="favClub" class="form-control add-items" name="favClub" type="text" style="">
 
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default add-items-btn" id="favClubBtn" style="font-weight:bold; background-color:#4aa1f3">Add Team</button>
-                                    </span>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default add-items-btn" id="favClubBtn" style="font-weight:bold; background-color:#4aa1f3">Add Team</button>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </form>
 
                 </div>
 
@@ -164,7 +166,7 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/messagelink.js"></script>
 <script src="/js/group/sendrequest.js"></script>
-<script src="/js/user/profile.js"> </script>
+<script src="/js/user/interest.js"> </script>
 <script src="/js/home.js"></script>
 <script src="/js/global.js"></script>
 <script src="/js/deparam.js"></script>

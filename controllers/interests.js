@@ -2,6 +2,7 @@ module.exports = function(async,Users,Message,FriendResult){
     return {
         SetRouting: function(router){
             router.get('/settings/interests', this.getInterestPage);
+            router.post('/settings/interests',this.postInterestPage);
 
         },
 
@@ -51,5 +52,30 @@ module.exports = function(async,Users,Message,FriendResult){
                 res.render('user/interest',{title:'Footballkik - Interest',user:req.user, data:result1, chat:result2 });
             })
         },
+
+        postInterestPage: function(req,res){
+            FriendResult.PostRequest(req,res,'/setting/interests');
+
+            async.parallel([
+                function(callback){
+                    if(req.body.favClub){
+                        Users.update({
+                            '_id':req.user.id,
+                            'favClub.clubName':{$ne:req.body.favClub}
+                        },
+                        {
+                            $push:{favClub:{
+                                clubName:req.body.favClub
+                            }}
+                        },(err,result1)=>{
+                                console.log(result1);
+                            callback(err,result1)
+                        })
+                    }
+                }
+            ],(err,results)=>{
+                res.redirect('/settings/interests');
+            });
+        }
     }
 }
