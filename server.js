@@ -18,7 +18,7 @@ var port = process.env.PORT || 8111;
 const container = require('./container');
 
 
-container.resolve(function(users, _, admin, home, group, results, privatechat, profile){
+container.resolve(function(users, _, admin, home, group, results, privatechat, profile, interests){
 
     mongoose.Promise = global.Promise;
     mongoose.connect('mongodb://mittalprince:prince25@ds255319.mlab.com:55319/chatapp1');
@@ -47,6 +47,7 @@ container.resolve(function(users, _, admin, home, group, results, privatechat, p
         results.SetRouting(router);
         privatechat.SetRouting(router);
         profile.SetRouting(router);
+        interests.SetRouting(router);
         app.use(router);
 
     }

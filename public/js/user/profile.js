@@ -22,6 +22,8 @@ $(document).ready(function(){
                 }
             })
         }
+
+        ShowImage(this);
     });
 
     $('#profile').on('click',function(){
@@ -30,14 +32,20 @@ $(document).ready(function(){
         var country = $('#country').val();
         var gender = $('#gender').val();
         var mantra = $('#mantra').val();
-        var userImage = $('#add-input').val();
+        var upload = $('#add-input').val();
+        var image = $('#user-image').val();
 
         var valid = true;
+
+        if(upload === ''){
+            $('#add-input').val(image);
+        }
 
         if(username == '' || fullname == '' || country == '' || gender == '' || mnatra == ''){
             valid = false;
             $('#error').html('<div class="alert alert-danger">You can not submit an empty field</div>')
         }else{
+            upload = $('#add-input').val();
             $('#error').html('')
         }
 
@@ -51,7 +59,7 @@ $(document).ready(function(){
                     gender:gender,
                     country:country,
                     mantra:mantra,
-                    upload:userImage
+                    upload:upload
                 },
                 success:function(){
                     setTimeout(function(){
@@ -64,3 +72,13 @@ $(document).ready(function(){
         }
     });
 });
+
+function ShowImage(input){
+    if(input.files && input.files[0]){
+        var reader = new FileReader();
+        reader.onload = function(e){
+            $('#show_img').attr('src',e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
