@@ -1,4 +1,4 @@
-    module.exports = function(Users,async,Message,FriendResult){
+    module.exports = function(Users,async,Message,FriendResult,Group){
         return {
             SetRouting: function(router) {
                 router.get('/group/:name', this.groupPage);
@@ -42,19 +42,47 @@
                             callback(err,newResult)
                         })
                     },
+
+                    function(callback){
+                        Group.find({})
+                            .populate('sender')
+                            .exec((err,result)=>{
+                                callback(err,result)
+                            })
+                    }
                 ],(err,results)=>{
                     const result1= results[0];
                     const result2 = results[1];
+                    const result3 = results[2];
                     //console.log(results)
                     // console.log('m ',result1);
                     //console.log(' yo yo ')
                     //console.log('p ',result1.request[0].userId)
                     res.render('groupchat/group',{title:'Footballkik - Group',user:req.user ,
-                        groupName: name, data:result1, chat:result2});
+                        groupName: name, data:result1, chat:result2, groupMsg:result3});
                 })
             },
             groupPostPage: function(req,res){
                 FriendResult.PostRequest(req,res,'/group/'+req.params.name);
+
+                async.parallel([
+                    function(callback){
+                    if(req.body.message){
+                        const group = new Group();
+                        group.sender = req.user._id;
+                        group.body = req.body.message;
+                        group.name = req.body.groupName;
+                        group.createdAt = new Date();
+
+                        group.save((err,msg)=>{
+                            console.log(msg);
+                             callback(err,msg);
+                        })
+                    }
+                    }
+                ],(err,results)=>{
+                    res.redirect('/group/'+req.params.name)
+                })
             },
 
             logout: function(req,res){
