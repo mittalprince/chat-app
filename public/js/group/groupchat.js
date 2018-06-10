@@ -17,9 +17,10 @@ $(document).ready(function(){
     });
 
     socket.on('userList',function(users){
+        //console.log("hello",users);
         var ol = $(`<ol></ol>`);
         for(var i=0; i< users.length; i++){
-            ol.append(`<p><a id="val" data-toggle="modal" data-target="#myModal">${users[i]}</a></p>`)
+            ol.append('<p><a id="val" data-toggle="modal" data-target="#myModal">'+users[i]+'</a></p>')
         }
         $(document).on('click','#val', function () {
             $('#name').text('@'+$(this).text());

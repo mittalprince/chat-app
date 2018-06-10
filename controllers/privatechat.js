@@ -36,7 +36,7 @@ module.exports = function(async,Users,Message, FriendResult){
                             }
                         }
                     ],function(err, newResult){
-                        console.log(newResult);
+                       // console.log(newResult);
                         callback(err,newResult)
                     })
                 },
@@ -54,7 +54,7 @@ module.exports = function(async,Users,Message, FriendResult){
                 const result1= results[0];
                 const result2= results[1];
                 const result3 = results[2];
-                console.log(results[1]);
+                //console.log(results[1]);
 
                 const params = req.params.name.split('.');
                 const nameParams = params[0];

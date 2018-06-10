@@ -38,7 +38,7 @@
                                 }
                             }
                         ],function(err, newResult){
-                            console.log(newResult);
+                            //console.log(newResult);
                             callback(err,newResult)
                         })
                     },
