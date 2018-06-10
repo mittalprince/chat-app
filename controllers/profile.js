@@ -1,7 +1,8 @@
-module.exports = function(async,Users,Message){
+module.exports = function(async,Users,Message,aws,formidable){
     return {
         SetRouting: function(router){
             router.get('/settings/profile', this.getProfilePage);
+            router.post('/userupload', aws.Upload.any(), this.userUpload);
         },
 
         getProfilePage: function(req,res){
@@ -49,6 +50,18 @@ module.exports = function(async,Users,Message){
                 //console.log('p ',result1.request[0].userId)
                 res.render('user/profile',{title:'Footballkik - Profile',user:req.user, data:result1, chat:result2 });
             })
+        },
+
+        userUpload: function(req,res){
+            const form = new formidable.IncomingForm();
+
+            form.on('file',(field, file)=>{
+
+            })
+
+            form.on('error',(err)=>{});
+            form.on('end',()=>{});
+            form.parse(req);
         }
     }
 }
