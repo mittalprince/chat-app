@@ -72,10 +72,60 @@ module.exports = function(async,Users,Message,FriendResult){
                             callback(err,result1)
                         })
                     }
-                }
+                },
+
             ],(err,results)=>{
                 res.redirect('/settings/interests');
             });
+
+            async.parallel([
+                function(callback){
+                    if(req.body.favPlayer){
+                        Users.update({
+                                '_id':req.user.id,
+                                'favPlayer.playerName':{$ne:req.body.favPlayer}
+                            },
+                            {
+                                $push:{favPlayer:{
+                                    playerName:req.body.favPlayer
+                                }}
+                            },(err,result2)=>{
+                                console.log(result2);
+                                callback(err,result2)
+                            })
+                    }
+                }
+
+            ],(err,results)=>{
+                res.redirect('/settings/interests');
+            });
+
+            async.parallel([
+                function(callback){
+                    if(req.body.nationalTeam){
+                        Users.update({
+                                '_id':req.user.id,
+                                'favNationalTeam.teamName':{$ne:req.body.nationalTeam}
+                            },
+                            {
+                                $push:{favNationalTeam:{
+                                    teamName:req.body.nationalTeam
+                                }}
+                            },(err,result1)=>{
+                                console.log(result1);
+                                callback(err,result1)
+                            })
+                    }
+                },
+
+            ],(err,results)=>{
+                res.redirect('/settings/interests');
+            });
+
         }
     }
 }
+
+
+
+

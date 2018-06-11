@@ -28,7 +28,7 @@ const userSchema = mongoose.Schema({
     favNationalTeam:[{
         teamName:{type:String, default:''}
     }],
-    favPlayers:[{
+    favPlayer:[{
         playerName:{type:String, default:''}
     }],
     favClub:[{
