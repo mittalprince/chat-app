@@ -38,36 +38,24 @@
                         <div class="col-md-12">
                             <div class="profile-sidebar">
                                 <div class="img-container">
-                                    <img src="https://uploadgroupimages.s3.amazonaws.com/<%= user.userImage%>" class="img-responsive img-user" id="show_img">
+                                    <img src="https://uploadgroupimages.s3.amazonaws.com/<%= data.userImage%>" class="img-responsive img-user" id="show_img">
                                 </div>
 
                                 <div class="profile-usertitle">
                                     <div class="profile-usertitle-name">
-                                        <%= user.fullname %>
+                                        <%= data.fullname %>
                                     </div>
                                     <div class="profile-usertitle-job">
-                                        <%= user.username %>
+                                        <%= data.username %>
                                     </div>
                                 </div>
 
                                 <div class="profile-usermenu">
                                     <ul class="nav">
-                                        <li>
-                                            <a href="/profile/<%= user.username %>" style="color:#4aa1f3 !important">
+                                        <li class="active">
+                                            <a href="/profile/<%= data.username %>" style="color:#4aa1f3 !important">
                                                 <i class="fa fa-home" style="color:#4aa1f3 !important"></i>
                                                 Overview
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="color:#4aa1f3 !important">
-                                                <i class="fa fa-user" style="color:#4aa1f3 !important"></i>
-                                                Profile
-                                            </a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="/setting/interests" style="color:#4aa1f3 !important">
-                                                <i class="fa fa-check" style="color:#4aa1f3 !important"></i>
-                                                Interests
                                             </a>
                                         </li>
                                     </ul>
@@ -91,21 +79,12 @@
 
                                 <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite Clubs</h3>
                                 <hr />
-                                <% _.forEach(user.favClub, function(val){%>
+                                <% _.forEach(data.favClub, function(val){%>
                                 <p style="margin-bottom:30px; color:#4aa1f3">
                                     <span style="color:grey" class="glyphicon glyphicon-check"></span>
                                     <%= val.clubName %>
                                 </p>
                                 <% })%>
-                                <div class="form-group ad-30" style="margin-top:18px;">
-                                    <div class="input-group">
-                                        <input id="favClub" class="form-control add-items" name="favClub" type="text" style="">
-
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default add-items-btn" id="favClubBtn" style="font-weight:bold; background-color:#4aa1f3; color:#fff">Add Club</button>
-                                        </span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -114,21 +93,12 @@
 
                                 <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite Players</h3>
                                 <hr />
-                                <% _.forEach( user.favPlayer, function(val){%>
+                                <% _.forEach( data.favPlayer, function(val){%>
                                 <p style="margin-bottom:30px; color:#4aa1f3">
                                     <span style="color:grey" class="glyphicon glyphicon-check"></span>
                                     <%= val.playerName %>
                                 </p>
                                 <% })%>
-                                <div class="form-group ad-30" style="margin-top:18px;">
-                                    <div class="input-group">
-                                        <input id="favPlayer" class="form-control add-items" name="favPlayer" type="text" style="">
-
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default add-items-btn" id="favPlayerBtn" style="font-weight:bold; background-color:#4aa1f3; color:#fff">Add Players</button>
-                                        </span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -137,21 +107,12 @@
 
                                 <h3 class="user-display-head" style="color:#4aa1f3 !important">Favourite National Teams</h3>
                                 <hr />
-                                <% _.forEach( user.favNationalTeam, function(val){%>
+                                <% _.forEach( data.favNationalTeam, function(val){%>
                                 <p style="margin-bottom:30px; color:#4aa1f3">
                                     <span style="color:grey" class="glyphicon glyphicon-check"></span>
                                     <%= val.teamName %>
                                 </p>
                                 <% })%>
-                                <div class="form-group ad-30" style="margin-top:18px;">
-                                    <div class="input-group">
-                                        <input id="nationalTeam" class="form-control add-items" name="nationalTeam" type="text" style="">
-
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default add-items-btn" id="nationalTeamBtn" style="font-weight:bold; background-color:#4aa1f3; color:#fff">Add Team</button>
-                                        </span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </form>

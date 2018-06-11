@@ -37,7 +37,7 @@
 
                                         </div>
                                         <div class="user cover-img">
-                                            <img src="https://placehold.it/300x300" class="img-circle" alt="">
+                                            <img src="https://uploadgroupimages.s3.amazonaws.com/<%= user.userImage %>" class="img-circle" alt="">
                                         </div>
                                         <div class="content">
                                             <div class="main">
@@ -52,7 +52,7 @@
                                             </div>
                                             <div class="footer">
                                                 <i class="fa fa-mail-forward"></i>
-                                                <a href="#">
+                                                <a style="text-decoration: none;" href="/profile/<%= user.username %>">
                                                     View My Profile
                                                 </a>
                                             </div>
@@ -114,7 +114,7 @@
                                 <% if(groupName === val.name){ %>
                                     <li class="left">
                                         <span class="chat-img1 pull-left">
-                                            <img src="https://placehold.it/300x300" class="img-circle"
+                                            <img src="https://uploadgroupimages.s3.amazonaws.com/<%= val.sender.userImage%>" class="img-circle"
                                                  alt="">
                                         </span>
                                         <div class="chat-body1">
@@ -130,7 +130,7 @@
                             <script id="message-template" type="text/template">
                                 <li class="left">
                                     <span class="chat-img1 pull-left">
-                                        <img src="https://placehold.it/300x300" class="img-circle"
+                                        <img src="https://uploadgroupimages.s3.amazonaws.com/{{userImage}}" class="img-circle"
                                              alt="">
                                     </span>
                                     <div class="chat-body1">

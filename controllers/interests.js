@@ -54,7 +54,7 @@ module.exports = function(async,Users,Message,FriendResult){
         },
 
         postInterestPage: function(req,res){
-            FriendResult.PostRequest(req,res,'/setting/interests');
+            FriendResult.PostRequest(req,res,'/settings/interests');
 
             async.parallel([
                 function(callback){
