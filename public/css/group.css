@@ -210,6 +210,11 @@ member_list li:hover {
     overflow: hidden;
     width: 200px;
 }
+    /*.card .user img{*/
+        /*background: none repeat scroll 0 0 #ffffff;*/
+        /*border: 4px solid #ffffff;*/
+         /*width: 100%;*/
+    /*}*/
 
 .card .content {
     background-color: rgba(0, 0, 0, 0);
