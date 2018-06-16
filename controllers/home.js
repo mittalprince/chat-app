@@ -83,7 +83,7 @@ module.exports = function(async, Club, _, Users, Message, FriendResult){
                 //console.log(dataChunk);
                 //console.log("\n ",results)
                 const countrySort = _.sortBy(res2, '_id')
-                res.render('home',{title:'Footballkik - Home', user:req.user, chunks:dataChunk,
+                res.render('home',{title:'Aarogya - Home', user:req.user, chunks:dataChunk,
                     country:countrySort, data:res3, chat:res4});
             })
 

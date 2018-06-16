@@ -71,7 +71,7 @@ module.exports = function(async,Users,Message, FriendResult){
                 // console.log('m ',result1);
                 //console.log(' yo yo ')
                 //console.log('p ',result1.request[0].userId)
-                res.render('private/privatechat',{title:'Footballkik - Private Chat',user:req.user ,
+                res.render('private/privatechat',{title:'Aarogya - Private Chat',user:req.user ,
                      data:result1, chat:result2,chats:result3, name:nameParams});
             })
         },

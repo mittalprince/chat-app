@@ -10,8 +10,10 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const passport = require('passport');
 const socketIO = require('socket.io');
-const {Users} = require('./helpers/UserClass')
-const {Global} = require('./helpers/Global')
+const {Users} = require('./helpers/UserClass');
+const {Global} = require('./helpers/Global');
+const compression =require('compression');
+const helmet = require('helmet');
 
 var port = process.env.PORT || 8111;
 
@@ -56,6 +58,9 @@ container.resolve(function(users, _, admin, home, group, results, privatechat, p
 
     function ConfigureExpress(app){
 
+        app.use(compression());
+        app.use(helmet());
+        
         require('./passport/passport-local');
         require('./passport/passport-facebook');
         require('./passport/passport-google');
