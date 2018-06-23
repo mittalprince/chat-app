@@ -53,8 +53,11 @@ container.resolve(function(users, _, admin, home, group, results, privatechat, p
         news.SetRouting(router);
         app.use(router);
 
-    }
+        app.use(function(req,res){
+            res.render('404')
+        });
 
+    }
 
     function ConfigureExpress(app){
 
