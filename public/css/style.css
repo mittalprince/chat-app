@@ -84,7 +84,7 @@ body {
     border: 1px;
 }
 
-.input-btn {
+.inputbtn {
     background: #4aa1f3;
     border-top-right-radius: 25px !important;
     border-bottom-right-radius: 25px !important;
@@ -98,11 +98,6 @@ body {
     letter-spacing: 0.3px;
     text-shadow:none;
     color:white !important;
-}
-
-.search-style {
-    width: 50%;
-    margin: 0 auto;
 }
 
 .add-apply{

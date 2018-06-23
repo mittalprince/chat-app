@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aarogya - Home</title>
+    <title>Footballkik - Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous">
@@ -20,7 +20,7 @@
     <form action="results" method="post">
         <div class="form-group ad-30" style="margin-top:8px;">
             <div class="input-group search-style">
-                <input class="form-control new-search-bar"  name="country" id="search" placeholder="Enter Your disease Name" type="text">
+                <input class="form-control new-search-bar"  name="country" id="search" placeholder="Enter Your Club Name" type="text">
                 <span class="input-group-btn">
                     <button class="btn input-btn" type="" id="search-form">Search</button>
                 </span>
@@ -46,9 +46,9 @@
                                         </p>
                                         <hr/>
                                         <select class="form-control " name="country" id="country" >
-                                            <option value="">Disease by Category</option>
+                                            <option value="">Filter By Country</option>
                                             <% _.forEach(country, function(value2){  %>
-                                                <option value="<%= value2._id %>"><%= value2._id %></option>
+                                            <option value="<%= value2._id %>"><%= value2._id %></option>
                                             <% })%>
                                         </select>
                                         <div class="clearfix"></div>
@@ -74,7 +74,7 @@
                                             <img src="https://uploadgroupimages.s3.amazonaws.com/<%= val2.image %>" alt="">
                                             <div class="caption">
                                                 <h4>
-                                                    <%= val2.name %>
+                                                    <%= val2.name %> (<%= val2.fans.length %>)
                                                 </h4>
 
                                                 <div class="row">
@@ -87,9 +87,9 @@
                                                     <div class="col-xs-12 col-md-6">
                                                         <input type="hidden" name="id" id="id" value="<%= val2._id %>">
                                                         <input type="hidden" name="clubName" id="club_Name" value="<% val2.name %>">
-                                                        <!--<button class="btn add-fav">-->
-                                                            <!--Add To Favorite-->
-                                                        <!--</button>-->
+                                                        <button class="btn add-fav">
+                                                            Add To Favorite
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
