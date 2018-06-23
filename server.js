@@ -23,7 +23,7 @@ const container = require('./container');
 container.resolve(function(users, _, admin, home, group, results, privatechat, profile, interests, news){
 
     mongoose.Promise = global.Promise;
-    mongoose.connect('mongodb://mittalprince:prince25@ds255319.mlab.com:55319/chatapp1');
+    mongoose.connect(process.env.MONGODB_URI);
 
     const app = SetupExpress();
 
@@ -76,7 +76,7 @@ container.resolve(function(users, _, admin, home, group, results, privatechat, p
 
         app.use(validator());
         app.use(session({
-            secret:'thisisasecretkey',
+            secret:process.env.SECRET_KEY,
             resave:true,
             saveInitialized:true,
             store:new MongoStore({mongooseConnection:mongoose.connection})
