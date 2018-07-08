@@ -16,8 +16,8 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.use(new GoogleStrategy({
-    clientID: secret.google.clientID,
-    clientSecret: secret.google.clientSecret,
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     profileFields: ['email', 'displayName', 'photos'],
     callbackURL: 'https://intense-harbor-56610.herokuapp.com/auth/google/callback',
     passReqToCallback: true

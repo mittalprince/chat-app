@@ -57,7 +57,7 @@ module.exports = function(async,Users,Message,FriendResult){
                 // console.log('m ',result1);
                 //console.log(' yo yo ')
                 //console.log('p ',result1.request[0].userId)
-                res.render('user/interest',{title:'Footballkik - Interest',user:req.user, data:result1, chat:result2 });
+                res.render('user/interest',{title:'Araogya - Interest',user:req.user, data:result1, chat:result2 });
             })
         },
 

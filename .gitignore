@@ -1,3 +1,7 @@
 secret
 .idea
+<<<<<<< HEAD
 .env
+=======
+.env
+>>>>>>> cd331a14ba36217a141952339350db1ca10c5fe0
