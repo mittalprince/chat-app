@@ -5,7 +5,7 @@ module.exports = function(){
         },
 
         footballNews: function(req,res){
-            res.render('news/footballnews', {title:'Araogya - Latest News', user:req.user});
+            res.render('news/footballnews', {title:'Footballkik - Latest News', user:req.user});
         }
     }
 }

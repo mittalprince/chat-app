@@ -59,7 +59,7 @@ module.exports = function(async,Users,Message,aws,formidable,FriendResult){
                 // console.log('m ',result1);
                 //console.log(' yo yo ')
                 //console.log('p ',result1.request[0].userId)
-                res.render('user/profile',{title:'Aarogya - Profile',user:req.user, data:result1, chat:result2 });
+                res.render('user/profile',{title:'Footballkik - Profile',user:req.user, data:result1, chat:result2 });
             });
         },
 
@@ -173,7 +173,7 @@ module.exports = function(async,Users,Message,aws,formidable,FriendResult){
                 const result1 = results[0];
                 const result2 = results[1];
 
-                res.render('user/overview', {title: 'Aarogya - Overview', user:req.user, data: result1, chat:result2});
+                res.render('user/overview', {title: 'Footballkik - Overview', user:req.user, data: result1, chat:result2});
             });
         },
 

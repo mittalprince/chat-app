@@ -48,7 +48,7 @@ module.exports = function(async, Club, Users){
                 for(let i=0 ; i < results[0].length; i += chunkSize){
                     dataChunk.push(results[0].slice(i,i+chunkSize));
                 }
-                res.render('members',{title: 'Aarogya - Members', user:req.user, chunks:dataChunk});
+                res.render('members',{title: 'Footballkik - Members', user:req.user, chunks:dataChunk});
             })
         },
 
@@ -69,7 +69,7 @@ module.exports = function(async, Club, Users){
                 for(let i=0 ; i < results[0].length; i += chunkSize){
                     dataChunk.push(results[0].slice(i,i+chunkSize));
                 }
-                res.render('members',{title: 'Aarogya - Members', user:req.user, chunks:dataChunk});
+                res.render('members',{title: 'Footballkik - Members', user:req.user, chunks:dataChunk});
             })
         }
     }

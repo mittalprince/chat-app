@@ -15,7 +15,7 @@ const {Global} = require('./helpers/Global');
 const compression =require('compression');
 const helmet = require('helmet');
 
-var port = process.env.PORT || 8111;
+var port = process.env.PORT || 8113;
 
 const container = require('./container');
 
@@ -23,7 +23,7 @@ const container = require('./container');
 container.resolve(function(users, _, admin, home, group, results, privatechat, profile, interests, news){
 
     mongoose.Promise = global.Promise;
-    mongoose.connect(process.env.MONGODB_URI);
+    mongoose.connect(process.env.MONGODB_URI || 'mongodb://mittalprince:prince25@ds255319.mlab.com:55319/chatapp1');
 
     const app = SetupExpress();
 
@@ -76,7 +76,7 @@ container.resolve(function(users, _, admin, home, group, results, privatechat, p
 
         app.use(validator());
         app.use(session({
-            secret:process.env.SECRET_KEY,
+            secret:process.env.SECRET_KEY || 'thisisasecretkey',
             resave:true,
             saveInitialized:true,
             store:new MongoStore({mongooseConnection:mongoose.connection})

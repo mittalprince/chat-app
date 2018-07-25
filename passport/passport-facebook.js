@@ -3,7 +3,7 @@
 const passport = require('passport');
 const User = require('../models/user');
 const FacebookStrategy = require('passport-facebook').Strategy;
-const secret  = require('../secret/secretFile')
+//const secret  = require('../secret/secretFile')
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -16,8 +16,8 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.use(new FacebookStrategy({
-    clientID: process.env.FB_CLIENT_ID,
-    clientSecret: process.env.FB_CLIENT_SECRET,
+    clientID: process.env.FB_CLIENT_ID || '160555657994587',
+    clientSecret: process.env.FB_CLIENT_SECRET || 'e7bd1d20584175543b95007fc65c9c6c',
     profileFields: ['email', 'displayName', 'photos'],
     callbackURL: 'https://intense-harbor-56610.herokuapp.com/auth/facebook/callback',
     passReqToCallback: true

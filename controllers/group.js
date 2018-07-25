@@ -66,7 +66,7 @@
                     // console.log('m ',result1);
                     //console.log(' yo yo ')
                     //console.log('p ',result1.request[0].userId)
-                    res.render('groupchat/group',{title:'Aarogya - Group',user:req.user ,
+                    res.render('groupchat/group',{title:'Footballkik - Group',user:req.user ,
                         groupName: name, data:result1, chat:result2, groupMsg:result3});
                 })
             },

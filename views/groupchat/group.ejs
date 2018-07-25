@@ -77,9 +77,9 @@
                                                 </p>
                                                 <hr style="margin-top:10px" />
                                                 <% if(data.friendsList.length > 0 ){ %>
-                                                <% _.forEach(data.friendsList, function(value){ %>
-                                                <div class=" friend" hidden>@<%= value.friendName %></div>
-                                                <% }) %>
+                                                    <% _.forEach(data.friendsList, function(value){ %>
+                                                        <div class=" friend" hidden>@<%= value.friendName %></div>
+                                                    <% }) %>
                                                 <% } %>
                                                 <div class="onlineFriends"></div>
 
@@ -112,17 +112,17 @@
                             <ul id="messages" class="list-unstyled">
                                 <% _.forEach(groupMsg, function(val){ %>
                                 <% if(groupName === val.name){ %>
-                                <li class="left">
+                                    <li class="left">
                                         <span class="chat-img1 pull-left">
                                             <img src="https://uploadgroupimages.s3.amazonaws.com/<%= val.sender.userImage%>" class="img-circle"
                                                  alt="">
                                         </span>
-                                    <div class="chat-body1">
-                                        <span class="chat-name"><%= val.sender.username %></span>
-                                        <br>
-                                        <%= val.body %>
-                                    </div>
-                                </li>
+                                        <div class="chat-body1">
+                                            <span class="chat-name"><%= val.sender.username %></span>
+                                            <br>
+                                            <%= val.body %>
+                                        </div>
+                                    </li>
                                 <% } %>
                                 <% })%>
                             </ul>
